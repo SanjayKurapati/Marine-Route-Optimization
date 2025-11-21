@@ -17,9 +17,9 @@ import requests
 import math
 import time
 
-ngrok.set_auth_token("2jsgEzXGMKiUuZFR7Dav17SOAf9_zpXKLhUVvb6scpJFAVHd")
+ngrok.set_auth_token("")
 
-WEATHERAPI_KEY = "35efb21612b64f93816143549242110"
+WEATHERAPI_KEY = ""
 USE_REAL_WEATHER = True
 
 app = Flask(__name__)
@@ -107,7 +107,7 @@ def get_weather(lat, lon):
 # -----------------------------------------------------
 # LOAD LAND SHAPES (FAST)
 # -----------------------------------------------------
-world = gpd.read_file("C:/Users/sunny/Downloads/shapefiles")
+world = gpd.read_file("/shapefiles")
 land = world.unary_union
 
 # -----------------------------------------------------
